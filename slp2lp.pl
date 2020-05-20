@@ -18,7 +18,7 @@ slp2lp(Algorithm1,Algorithm2) :-
 symbol((:-),":-"):-!.
 symbol(Symbol,Symbol) :-!.
 
-slp2lp_variables(Name1,[v,Name1]) :- atom(Name1),!.
+slp2lp_variables(Name1,[v,Name1]) :- predicate_or_rule_name(Name1),!.
 slp2lp_variables(Name,Name) :- !.
 
 /**
