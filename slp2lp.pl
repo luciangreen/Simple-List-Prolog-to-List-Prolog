@@ -119,10 +119,11 @@ process_body2(Body1,Body2) :-
    
    
 process_statement1(Statement,Result1) :-
-	Statement=[Name,Arguments],
+	((Statement=[Name,Arguments],
 	findall(Name2,(member(Argument,Arguments),
 	(predicate_or_rule_name(Argument)->Name2=[v,Argument];
 	Name2=Argument)),Result2),
-	Result1=[[[n,Name],Result2]].
-	
+	Result1=[[[n,Name],Result2]])->true;
+	((Statement=[Name],
+	Result1=[[[n,Name]]]))).
 	
