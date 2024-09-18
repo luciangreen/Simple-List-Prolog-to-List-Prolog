@@ -7,7 +7,7 @@ Algorithm2= [[[n,f1],[[v,a],[v,b],[v,c],[v,d],[v,e]],":-",[[[n,+],[[v,a],[v,b],[
 
 **/
 
-:- include('la_strings.pl').
+:-include('la_strings.pl').
 
 slp2lp(Algorithm1,Algorithm2) :-
 	findall([[n,Name],Arguments4,Symbol2,Body2],(member(Function1,Algorithm1),Function1=[Name,Arguments1,Symbol1,Body1],symbol(Symbol1,Symbol2),
